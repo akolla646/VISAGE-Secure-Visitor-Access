@@ -166,5 +166,6 @@ Educational project for demonstrating secure application development practices.
 
 **Project Purpose**: Academic demonstration of secure visitor access management using modern cryptography and access control.
 
-**Author**: Kolla Akshara␠␠
+**Author**: Kolla Akshara
+
 **Repository**: [github.com/akolla646/VISAGE-Secure-Visitor-Access/](https://github.com/akolla646/VISAGE-Secure-Visitor-Access/)
