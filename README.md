@@ -153,7 +153,7 @@ All sensitive visitor information embedded in QR codes is encrypted before stora
 
 ## Documentation
 
-- **SECURITY_DOCUMENTATION.md**: Detailed security architecture, threat model, and mitigation strategies
+- **SECURITY.md**: Detailed security architecture, threat model, and mitigation strategies
 - **Inline Code Comments**: Explain cryptographic and authorization decisions
 
 ---
@@ -166,5 +166,5 @@ Educational project for demonstrating secure application development practices.
 
 **Project Purpose**: Academic demonstration of secure visitor access management using modern cryptography and access control.
 
-**Author**: Kolla Akshara 
-**Repository**: github.com/akolla646/VISAGE-Secure-Visitor-Access/
+**Author**: Kolla Akshara␠␠
+**Repository**: [github.com/akolla646/VISAGE-Secure-Visitor-Access/](https://github.com/akolla646/VISAGE-Secure-Visitor-Access/)
