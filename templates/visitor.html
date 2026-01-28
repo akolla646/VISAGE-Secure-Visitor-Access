@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitor Dashboard - VISAGE</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h3>Visitor Dashboard</h3>
+        <p>Welcome, {{ username }}</p>
+
+        <form method="POST">
+            <input name="purpose" placeholder="Purpose of Visit" required>
+            <button>Request Access</button>
+        </form>
+
+        {% if visit %}
+        <p>Status: <b>{{ visit[0] }}</b></p>
+
+        {% if visit[0] == "APPROVED" %}
+        <h4>Your Access QR Code</h4>
+        <img src="/{{ visit[1] }}" width="200">
+        {% endif %}
+        {% endif %}
+    </div>
+</body>
+</html>

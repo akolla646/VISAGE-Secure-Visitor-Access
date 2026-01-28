@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - VISAGE</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <!-- FLASH ALERTS for login errors -->
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    {% for message in messages %}
+    <script>
+        alert("{{ message }}");
+    </script>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+
+    {% if not otp_stage %}
+    <form method="POST">
+        <h3>Login</h3>
+        <input name="username" placeholder="Username" required>
+        <input name="password" type="password" placeholder="Password" required>
+        <button>Send OTP</button>
+    </form>
+    {% else %}
+    <form method="POST" action="/verify_otp">
+        <h3>Enter OTP (sent to phone)</h3>
+        <input type="hidden" name="username" value="{{username}}">
+        <input name="otp" placeholder="6-digit OTP" required>
+        <button>Verify OTP</button>
+    </form>
+    {% endif %}
+</body>
+</html>
